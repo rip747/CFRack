@@ -1,3 +1,5 @@
 CFRACK
 
 This is a VERY basic demonstration on chaining middleware to manipulate the ColdFusion request.
+
+Special thanks to Jim Myhrberg for his php-rack project which this is based off of.
