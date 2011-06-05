@@ -1,0 +1,3 @@
+CFRACK
+
+This is a VERY basic demonstration on chaining middleware to manipulate the ColdFusion request.
