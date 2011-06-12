@@ -4,9 +4,10 @@
 	
 	<cffunction name="onApplicationStart" returnType="boolean" output="false">
 		<cfset application.CFRack = createObject("component", "CFRack").init()>
-		<cfset application.CFRack.use(middleware="middleware.Middleware1", author="Tony Petruzzi", poweredby="CFWheels 1.1.3")>
-		<cfset application.CFRack.use("middleware.Middleware2")>
-		<cfset application.CFRack.use("middleware.App")>
+		<cfset application.CFRack.use("middleware.RequestTimer")>
+		<cfset application.CFRack.use("middleware.ParamsScope")>
+		<cfset application.CFRack.use(middleware="middleware.HeaderInjection", author="Tony Petruzzi", poweredby="CFWheels 1.1.3")>
+		<cfset application.CFRack.use("middleware.RequestHandler")>
 		<cfset application.CFRack.build()>
 		<cfreturn true>
 	</cffunction>

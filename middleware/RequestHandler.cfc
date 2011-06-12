@@ -1,3 +1,5 @@
+<!--- 
+ --->
 <cfcomponent output="false">
 
 	<cffunction name="init">
@@ -15,6 +17,7 @@
 		<cfsavecontent variable="loc.body"><cfinclude template="#arguments.env.script_name#"></cfsavecontent>
 
 		<cfset arrayAppend(loc.content, loc.body)>
+		<cfset ArrayAppend(loc.content, "<p>Appending content to the body of the calling page</p>")>
 		
 		<cfset loc.ret = [loc.statusCode, loc.headers, loc.content]>
 		<cfreturn loc.ret>
